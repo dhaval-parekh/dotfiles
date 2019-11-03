@@ -22,6 +22,7 @@ brew update
 ## Upgrade Homebrew packages.
 echo "-- Homebrew upgrade.";
 brew upgrade
+brew cask upgrade
 
 ##################################################################################################
 ## Install Packages
@@ -126,5 +127,23 @@ brew cask install virtualbox
 ## Brew cleanup.
 echo "-- Brew cleanup.";
 brew cleanup
+brew cask cleanup
 
 echo "Homebrew setup complated.";
+
+
+##################################################################################################
+## Installing additional application from App store.
+echo "Installing Applications from App store.";
+
+mas install 497799835   #Xcode
+mas install 488709442   #VisualJSON
+mas install 409183694   #Keynote
+mas install 803453959   #Slack
+mas install 1147396723  #WhatsApp
+mas install 1012930195  #HandShaker
+mas install 1094748271  #FullContact
+mas install 1333542190  #1Password 7
+mas install 957734279   #Toggle Desktop
+
+echo "All Application installed";
