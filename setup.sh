@@ -42,3 +42,9 @@ fi
 ##################################################################################################
 ## Setup Homebrew
 bash ./scripts/brew.sh
+
+## Setup OS Preference.
+bash ./scripts/brew.sh
+
+echo "Please restart your system.";
+exit 0;
