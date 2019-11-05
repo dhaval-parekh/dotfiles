@@ -28,6 +28,9 @@ brew cask upgrade
 ## Install Packages
 echo "-- Installing homebrew packages.";
 
+## Install git
+brew install git
+
 ## Replace default OSX language interpreters with brew alternatives.
 ## This gives latest lanuage versions.
 brew install python

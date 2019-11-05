@@ -44,7 +44,20 @@ fi
 bash ./scripts/brew.sh
 
 ## Setup OS Preference.
-bash ./scripts/brew.sh
+bash ./scripts/osx.sh
+
+##################################################################################################
+## Copy all config files which start with . (hidden file)
+ln -s ~/dotfiles/config/.* ~
+
+##################################################################################################
+## Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+##################################################################################################
+## Git Configuration.
+git config user.email "dmparekh007@gmail.com"
+git config user.name "Dhaval Parekh"
 
 echo "Please restart your system.";
 exit 0;
