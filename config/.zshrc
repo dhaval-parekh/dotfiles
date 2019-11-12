@@ -98,4 +98,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:$HOME/.composer/vendor/bin"
+export PATH="/usr/local/opt/valet-php@7.2/bin:$PATH"
+export PATH="/usr/local/opt/valet-php@7.2/sbin:$PATH"
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH" # For valet plus
+
+export LDFLAGS="-L/usr/local/opt/valet-php@7.2/lib"
+export CPPFLAGS="-I/usr/local/opt/valet-php@7.2/include"

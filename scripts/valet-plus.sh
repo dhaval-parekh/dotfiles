@@ -15,7 +15,7 @@ composer global require weprovide/valet-plus
 
 valet fix
 
-valet install --with-mariadb
+valet install
 
 
 ##################################################################################################
@@ -35,7 +35,7 @@ echo "Please check: https://info.test/";
 ## Incase of issues. Troubleshoots with following steps
 
 ## Issue 1: Maybe issue with elastic search conf file. (https://github.com/weprovide/valet-plus/issues/391)
-
+#
 # Run below command.
 # sudo nginx -t
 #
@@ -47,6 +47,24 @@ echo "Please check: https://info.test/";
 # sudo cp ~/.composer/vendor/weprovide/valet-plus/cli/stubs/elasticsearch.conf /usr/local/etc/nginx/valet/elasticsearch.conf
 # sudo sed -i '' 's/VALET_DOMAIN/test/g' /usr/local/etc/nginx/valet/elasticsearch.conf
 # valet restart
+
+## Issue 2: During the installation. And issue related to extension. Like apcu.so is already included.
+#
+# This is causing because extension included twice.
+# Goto php.ini (Possiable location of php: /usr/local/etc/valet-php/) And comment out second occuerance.
+
+## Issue 3: During `brew services list` mysql has error status.
+#
+# brew mysql stop
+# brew mysql start
+
+## Issue 4: When site run apcu_fetch() function is undefined.
+#
+# Check in which version php have "apcu" extension is added.
+# And then use "valet use PHP_VERSION" command to use same php version in which extension is encluded.
+
+##################################################################################################
+## After installation. Please check all services is working or not.
 
 ##################################################################################################
 ## To uninstall valet plus

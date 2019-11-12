@@ -59,5 +59,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 git config user.email "dmparekh007@gmail.com"
 git config user.name "Dhaval Parekh"
 
+##################################################################################################
+## Install WP CLI package
+wp package install git@github.com:aaemnnosttv/wp-cli-valet-command.git
+
+
 echo "Please restart your system.";
 exit 0;

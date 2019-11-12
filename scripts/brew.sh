@@ -38,6 +38,9 @@ brew install python@2
 
 brew install ruby
 brew install php
+brew install nginx
+brew install dnsmasq
+brew install mysql
 brew install composer
 brew install go
 brew install node
@@ -108,7 +111,6 @@ brew cask install virtualbox
 
 # brew install gnu-sed --with-default-names
 # brew install nmap
-# brew install dnsmasq
 # brew install dos2unix
 # brew install dsh
 # brew install jq
@@ -148,5 +150,6 @@ mas install 1012930195  #HandShaker
 mas install 1094748271  #FullContact
 mas install 1333542190  #1Password 7
 mas install 957734279   #Toggle Desktop
+mas install 405399194   #Kindle
 
 echo "All Application installed";
