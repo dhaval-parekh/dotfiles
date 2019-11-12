@@ -106,3 +106,8 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH" # For valet plus
 
 export LDFLAGS="-L/usr/local/opt/valet-php@7.2/lib"
 export CPPFLAGS="-I/usr/local/opt/valet-php@7.2/include"
+
+# Reference: https://wp-cli.org/#tab-completions
+autoload bashcompinit
+bashcompinit
+source "$HOME/wp-completion.bash"

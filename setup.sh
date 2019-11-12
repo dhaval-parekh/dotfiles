@@ -63,6 +63,9 @@ git config user.name "Dhaval Parekh"
 ## Install WP CLI package
 wp package install git@github.com:aaemnnosttv/wp-cli-valet-command.git
 
+## Install wp-completion.bash
+cd ~
+curl -O https://raw.githubusercontent.com/wp-cli/wp-cli/v2.3.0/utils/wp-completion.bash
 
 echo "Please restart your system.";
 exit 0;
