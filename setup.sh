@@ -56,8 +56,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 ##################################################################################################
 ## Git Configuration.
-git config user.email "dmparekh007@gmail.com"
-git config user.name "Dhaval Parekh"
+git config --global user.email "dmparekh007@gmail.com"
+git config --global user.name "Dhaval Parekh"
 
 ##################################################################################################
 ## Install WP CLI package
