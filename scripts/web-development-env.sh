@@ -12,6 +12,7 @@ git clone https://github.com/WordPress/WordPress-Coding-Standards.git wpcs
 cd ~/coding-standard/wpcs
 git checkout master
 
+cd ~/coding-standard
 git clone https://github.com/Automattic/VIP-Coding-Standards.git wpvipcs
 cd ~/coding-standard/wpvipcs
 git checkout master
