@@ -17,6 +17,7 @@ git clone https://github.com/Automattic/VIP-Coding-Standards.git wpvipcs
 cd ~/coding-standard/wpvipcs
 git checkout master
 
+cd ~/coding-standard
 git clone https://github.com/PHPCompatibility/PHPCompatibility.git
 cd ~/coding-standard/PHPCompatibility
 git checkout master
