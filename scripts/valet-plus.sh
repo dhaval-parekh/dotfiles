@@ -7,11 +7,14 @@ brew update
 
 brew tap henkrehorst/php
 
-brew install valet-php@7.2
+brew install valet-php@8.1 --build-from-source
+brew link --overwrite valet-php@8.1
+brew cleanup valet-php@8.1
 
 brew install composer # This one is already installed.
 
 composer global require weprovide/valet-plus
+
 
 valet fix
 

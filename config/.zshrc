@@ -8,7 +8,8 @@ export ZSH="/Users/dhavalparekh/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="fino-time"
+ZSH_THEME="fino-time" # mira
+#ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -100,12 +101,12 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:$HOME/.composer/vendor/bin"
-export PATH="/usr/local/opt/valet-php@7.2/bin:$PATH"
-export PATH="/usr/local/opt/valet-php@7.2/sbin:$PATH"
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH" # For valet plus
+#export PATH="/usr/local/opt/mysql@5.7/bin:$PATH" # For valet plus
+export PATH="$PATH:$HOME/Library/Python/3.8/bin"
+#export PATH="$PATH:/usr/local/bin/python3.10"
+export PATH="/usr/local/Cellar/mariadb/10.11.2/bin/mariadb:$PATH"
 
-export LDFLAGS="-L/usr/local/opt/valet-php@7.2/lib"
-export CPPFLAGS="-I/usr/local/opt/valet-php@7.2/include"
+export WP_TESTS_DIR="/Users/dhavalparekh/work/wordpress-trunk/tests/phpunit"
 
 # Reference: https://wp-cli.org/#tab-completions
 autoload bashcompinit
@@ -116,3 +117,29 @@ source "$HOME/wp-completion.bash"
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+
+export PATH="/usr/local/opt/php@8.1/bin:$PATH"
+export PATH="/usr/local/opt/php@8.1/sbin:$PATH"
+export LDFLAGS="-L/usr/local/opt/php@8.1/lib"
+export CPPFLAGS="-I/usr/local/opt/php@8.1/include"
+
+#export PATH="/usr/local/opt/php@8.0/bin:$PATH"
+#export PATH="/usr/local/opt/php@8.0/sbin:$PATH"
+#export LDFLAGS="-L/usr/local/opt/php@8.0/lib"
+#export CPPFLAGS="-I/usr/local/opt/php@8.0/include"
+
+#export PATH="/usr/local/opt/php@7.4/bin:$PATH"
+#export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
+#export LDFLAGS="-L/usr/local/opt/php@7.4/lib"
+#export CPPFLAGS="-I/usr/local/opt/php@7.4/include"
+
+
+export THL_DEFAULT_PROJECTS_DIRECTORY="$HOME/www/Travelopia"
+export TOOLS_SSH_ID_FILE="$HOME/.ssh/id_rsa"
+
+export SQL_HOST=$(ipconfig getifaddr en0)
+
+nvm use
+
+

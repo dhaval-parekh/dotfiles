@@ -31,6 +31,9 @@ echo "-- Installing homebrew packages.";
 ## Install git
 brew install git
 
+## Install SVN
+brew install svn
+
 ## Replace default OSX language interpreters with brew alternatives.
 ## This gives latest lanuage versions.
 brew install python
@@ -80,7 +83,7 @@ brew cask install jumpcut
 # brew cask install skitch
 
 ## Development Apps.
-#brew cask install docker
+brew cask install docker
 brew cask install gas-mask
 brew cask install google-chrome
 brew cask install firefox
