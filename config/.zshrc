@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/opt/homebrew/bin/brew:/usr/local/sbin:$PATH"
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 #export PATH="/usr/local/opt/mysql@5.7/bin:$PATH" # For valet plus
 export PATH="$PATH:$HOME/Library/Python/3.8/bin"
@@ -111,18 +111,17 @@ export WP_TESTS_DIR="/Users/dhavalparekh/work/wordpress-trunk/tests/phpunit"
 # Reference: https://wp-cli.org/#tab-completions
 autoload bashcompinit
 bashcompinit
-source "$HOME/wp-completion.bash"
-
+# source "$HOME/wp-completion.bash"
 
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 
-export PATH="/usr/local/opt/php@8.1/bin:$PATH"
-export PATH="/usr/local/opt/php@8.1/sbin:$PATH"
-export LDFLAGS="-L/usr/local/opt/php@8.1/lib"
-export CPPFLAGS="-I/usr/local/opt/php@8.1/include"
+export PATH="/usr/local/opt/php@8.2/bin:$PATH"
+export PATH="/usr/local/opt/php@8.2/sbin:$PATH"
+export LDFLAGS="-L/usr/local/opt/php@8.2/lib"
+export CPPFLAGS="-I/usr/local/opt/php@8.2/include"
 
 #export PATH="/usr/local/opt/php@8.0/bin:$PATH"
 #export PATH="/usr/local/opt/php@8.0/sbin:$PATH"
@@ -137,9 +136,16 @@ export CPPFLAGS="-I/usr/local/opt/php@8.1/include"
 
 export THL_DEFAULT_PROJECTS_DIRECTORY="$HOME/www/Travelopia"
 export TOOLS_SSH_ID_FILE="$HOME/.ssh/id_rsa"
-
 export SQL_HOST=$(ipconfig getifaddr en0)
+export SHELL_PIPE=1
 
-nvm use
+# nvm use
 
 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/dhavalparekh/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/dhavalparekh/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/dhavalparekh/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/dhavalparekh/google-cloud-sdk/completion.zsh.inc'; fi

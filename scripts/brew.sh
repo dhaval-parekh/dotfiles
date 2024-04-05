@@ -11,7 +11,13 @@ echo "Homebrew Setup started.";
 ##################################################################################################
 ## Install Homebrew.
 echo "-- Installing Homebrew...";
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+rm -rf ~/homebrew-install
+git clone git@github.com:Homebrew/install.git ~/homebrew-install
+bash -C ~/homebrew-install/install.sh
+
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/dhavalparekh/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ##################################################################################################
 ## Update Homebrew packages.
@@ -22,7 +28,7 @@ brew update
 ## Upgrade Homebrew packages.
 echo "-- Homebrew upgrade.";
 brew upgrade
-brew cask upgrade
+brew upgrade --cask
 
 ##################################################################################################
 ## Install Packages
@@ -50,6 +56,7 @@ brew install node
 brew install nvm
 
 ## Replace OSX tools with brew alternatives.
+brew install zsh
 brew install curl
 brew install git
 brew install bash
@@ -63,35 +70,37 @@ brew install wp-cli
 brew install youtube-dl
 brew install mas
 brew install openssl
+brew install termius
+brew install composer
 
 
 ## Tools
-brew cask install vlc
-brew cask install skype
-brew cask install teamviewer
-brew cask install dropbox
-brew cask install appcleaner
-brew cask install ccleaner
-brew cask install the-unarchiver
-brew cask install android-file-transfer
-brew cask install cyberduck
-brew cask install mysqlworkbench
-brew cask install sequel-pro
-brew cask install diffmerge
-brew cask install jumpcut
-# brew cask install smcfancontrol # Not working
-# brew cask install skitch
+# brew  install vlc --cask
+# brew  install skype --cask
+# brew  install teamviewer --cask
+# brew  install dropbox --cask
+# brew  install appcleaner --cask
+# brew  install ccleaner --cask
+# brew  install the-unarchiver --cask
+# brew  install android-file-transfer --cask
+# brew  install cyberduck --cask
+# brew  install mysqlworkbench --cask
+brew  install sequel-pro --cask
+brew  install diffmerge --cask
+brew  install jumpcut --cask
+# brew  install smcfancontrol # Not working
+# brew  install skitch --cask
 
 ## Development Apps.
-brew cask install docker
-brew cask install gas-mask
-brew cask install google-chrome
-brew cask install firefox
-brew cask install tunnelbear
-brew cask install sublime-text
-brew cask install visual-studio-code
-brew cask install vagrant
-brew cask install virtualbox
+brew  install docker --cask
+brew  install gas-mask --cask
+brew  install google-chrome --cask
+brew  install firefox --cask
+brew  install tunnelbear --cask
+brew  install sublime-text --cask
+# brew  install visual-studio-code --cask
+# brew  install vagrant --cask
+# brew  install virtualbox --cask
 
 
 # brew install coreutils
@@ -122,20 +131,20 @@ brew cask install virtualbox
 # brew install qt
 
 # QuickLook plugins for finder
-# brew cask install qlcolorcode
-# brew cask install qlimagesize
-# brew cask install qlmarkdown
-# brew cask install qlprettypatch
-# brew cask install qlstephen
-# brew cask install quicklook-csv
-# brew cask install quicklook-json
+# brew  install qlcolorcode
+# brew  install qlimagesize
+# brew  install qlmarkdown
+# brew  install qlprettypatch
+# brew  install qlstephen
+# brew  install quicklook-csv
+# brew  install quicklook-json
 
 
 ##################################################################################################
 ## Brew cleanup.
 echo "-- Brew cleanup.";
 brew cleanup
-brew cask cleanup
+brew  cleanup --cask
 
 echo "Homebrew setup complated.";
 
