@@ -149,3 +149,7 @@ if [ -f '/Users/dhavalparekh/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/dh
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/dhavalparekh/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/dhavalparekh/google-cloud-sdk/completion.zsh.inc'; fi
+
+
+
+  echo 'Hello world'
