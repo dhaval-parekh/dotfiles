@@ -151,5 +151,3 @@ if [ -f '/Users/dhavalparekh/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/dh
 if [ -f '/Users/dhavalparekh/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/dhavalparekh/google-cloud-sdk/completion.zsh.inc'; fi
 
 
-
-  echo 'Hello world'
